@@ -8,12 +8,16 @@
 
 import UIKit
 
+//MARK: - UITextField
+
 extension UITextField {
 	var optionalText: String? {
 		let trimmedText = self.text?.trimmingCharacters(in: .whitespacesAndNewlines)
 		return (trimmedText ?? "").isEmpty ? nil : trimmedText
 	}
 }
+
+//MARK: - UIViewController
 
 extension UIViewController {
 	func fillIn(text field: UITextField, alertMessage: String) -> String? {
@@ -34,6 +38,8 @@ extension UIViewController {
 	}
 }
 
+//MARK: - UIImageView
+
 extension UIImageView {
 	func setStarRating(of stars: Int) {
 		self.image = UIImage(named: "\(stars)StarRating")
@@ -49,5 +55,23 @@ extension UIImageView {
 				}
 			}
 		}
+	}
+}
+
+//MARK: - Codable
+
+extension Decodable {
+	static func decode(data: Data) throws -> Self {
+		let decoder = JSONDecoder()
+		return try decoder.decode(Self.self, from: data)
+	}
+}
+
+extension Encodable {
+	func encode() throws -> Data {
+		let encoder = JSONEncoder()
+		encoder.outputFormatting = .prettyPrinted
+		encoder.keyEncodingStrategy = .convertToSnakeCase
+		return try encoder.encode(self)
 	}
 }

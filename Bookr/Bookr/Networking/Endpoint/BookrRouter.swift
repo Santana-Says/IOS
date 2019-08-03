@@ -79,22 +79,17 @@ extension BookrRouter: EndPointType {
 	var task: HTTPTask {
 		switch self {
 		case .login(let data):
-			return .requestParameters(bodyParameters: ["email":data.email, "password":data.password], urlParameters: nil)
+			let json = try? data.encode()
+			return .requestParameters(bodyParameters: json, urlParameters: nil)
 		case .register(let data):
-			return .requestParameters(bodyParameters: [
-										"first_name":data.firstName,
-										"last_name":data.lastName,
-										"email":data.email,
-										"password":data.password
-										], urlParameters: nil)
+			let json = try? data.encode()
+			return .requestParameters(bodyParameters: json, urlParameters: nil)
 		case .postReview(_, let data):
-			return .requestParameters(bodyParameters: [
-										"review":data.review,
-										"reviewer":data.userId,
-										"ratings":data.ratings
-										], urlParameters: nil)
+			let json = try? data.encode()
+			return .requestParameters(bodyParameters: json, urlParameters: nil)
 		case .addBook(let data):
-			return .requestParameters(bodyParameters: ["book_id":data.bookId, "user_id":data.userId], urlParameters: nil)
+			let json = try? data.encode()
+			return .requestParameters(bodyParameters: json, urlParameters: nil)
 		default:
 			return .request
 		}

@@ -50,14 +50,14 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
 		}
 	}
 	
-	private func configureParameters(bodyParameters: Parameters?, urlParameters: Parameters?, request: inout URLRequest) throws {
+	private func configureParameters(bodyParameters: Data?, urlParameters: Data?, request: inout URLRequest) throws {
 		do {
 			if let bodyParameters = bodyParameters {
 				try JSONParameterEncoder.encode(urlRequest: &request, with: bodyParameters)
 			}
-			if let urlParameters = urlParameters {
-				try URLParameterEncoding.encode(urlRequest: &request, with: urlParameters)
-			}
+//			if let urlParameters = urlParameters {
+//				try URLParameterEncoding.encode(urlRequest: &request, with: urlParameters)
+//			}
 		} catch {
 			throw error
 		}
