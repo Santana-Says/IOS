@@ -47,6 +47,14 @@ class PostReviewVC: UIViewController {
 	
 	@IBAction func starBtnAction(_ sender: StarButton) {
 		sender.IsStarOn.toggle()
+		for star in starBtnCollection {
+			if sender.IsStarOn && star.tag < sender.tag {
+				star.IsStarOn = sender.IsStarOn
+			}
+			if !sender.IsStarOn && star.tag > sender.tag {
+				star.IsStarOn = sender.IsStarOn
+			}
+		}
 	}
 	
 	//MARK: - Helpers

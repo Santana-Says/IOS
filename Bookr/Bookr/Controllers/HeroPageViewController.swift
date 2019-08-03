@@ -39,15 +39,17 @@ class HeroPageViewController: UIViewController {
 
 	private func checkForLogin() {
 		if SettingsController.shared.isSaveCredentials {
-			guard let credentials = SettingsController.shared.userCredentials else { return }
+			guard let credentials = SettingsController.shared.userCredentials else {
+				showLogins()
+				return
+			}
 			NetworkManager.shared.login(credentials: credentials) { (result, error) in
 				if let error = error {
 					SettingsController.shared.isSaveCredentials = false
 					DispatchQueue.main.async {
 						self.presentInfoAlert(title: "Login Error", message: error)
 					}
-					self.loginBtn.isHidden = false
-					self.startBtn.isHidden = false
+					self.showLogins()
 				} else if let result = result {
 					SettingsController.shared.userToken = result.token
 					print("token updated")
@@ -57,8 +59,12 @@ class HeroPageViewController: UIViewController {
 				}
 			}
 		} else {
-			loginBtn.isHidden = false
-			startBtn.isHidden = false
+			showLogins()
 		}
+	}
+	
+	private func showLogins() {
+		loginBtn.isHidden = false
+		startBtn.isHidden = false
 	}
 }

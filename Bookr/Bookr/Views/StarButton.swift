@@ -28,7 +28,7 @@ class StarButton: UIButton {
 	}
 	
 	func setupView() {
-		imageView?.image = UIImage(named: IsStarOn ? "starOn" : "starOff")
+		setImage(UIImage(named: IsStarOn ? "starOn" : "starOff"), for: .normal)
 	}
 	
 }

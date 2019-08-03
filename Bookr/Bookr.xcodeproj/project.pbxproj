@@ -34,7 +34,6 @@
 		B5FE506C22EFAF8200EB6C6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506B22EFAF8200EB6C6D /* User.swift */; };
 		B5FE506E22EFB62000EB6C6D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506D22EFB62000EB6C6D /* NetworkManager.swift */; };
 		B5FE507022EFBC1100EB6C6D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506F22EFBC1100EB6C6D /* Login.swift */; };
-		B5FE507222EFC15E00EB6C6D /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE507122EFC15E00EB6C6D /* TestVC.swift */; };
 		B5FE507422EFC74700EB6C6D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE507322EFC74700EB6C6D /* LoginRequest.swift */; };
 		B5FE507622F0774300EB6C6D /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE507522F0774300EB6C6D /* RegisterRequest.swift */; };
 		B5FE507822F0783C00EB6C6D /* UserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE507722F0783C00EB6C6D /* UserAPIManager.swift */; };
@@ -85,7 +84,6 @@
 		B5FE506B22EFAF8200EB6C6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B5FE506D22EFB62000EB6C6D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5FE506F22EFBC1100EB6C6D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		B5FE507122EFC15E00EB6C6D /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		B5FE507322EFC74700EB6C6D /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		B5FE507522F0774300EB6C6D /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		B5FE507722F0783C00EB6C6D /* UserAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIManager.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 				B5FE508F22F1665300EB6C6D /* SignUpVC.swift */,
 				B5FE509222F1665300EB6C6D /* HomeVC.swift */,
 				B5FE508E22F1665300EB6C6D /* LoginVC.swift */,
-				B5FE507122EFC15E00EB6C6D /* TestVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -419,7 +416,6 @@
 				B5FE507022EFBC1100EB6C6D /* Login.swift in Sources */,
 				B506A54622EF651000061FCF /* NetworkError.swift in Sources */,
 				B506A54822EF658300061FCF /* URLParameterEncoder.swift in Sources */,
-				B5FE507222EFC15E00EB6C6D /* TestVC.swift in Sources */,
 				B5FE506C22EFAF8200EB6C6D /* User.swift in Sources */,
 				B5FE507622F0774300EB6C6D /* RegisterRequest.swift in Sources */,
 				B506A53A22EF60BD00061FCF /* EndPointType.swift in Sources */,
