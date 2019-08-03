@@ -45,7 +45,7 @@ class PostReviewVC: UIViewController {
 		postReview()
 	}
 	
-	@IBAction func starBtnAction(_ sender: StarButton) {
+	@IBAction func starBtnToggle(_ sender: StarButton) {
 		sender.IsStarOn.toggle()
 		for star in starBtnCollection {
 			if sender.IsStarOn && star.tag < sender.tag {
@@ -84,7 +84,7 @@ class PostReviewVC: UIViewController {
 				break
 			}
 		}
-		#warning("Pass in userId")
+		
 		return ReviewRequest(review: reviewTextView.text, userId: 11, ratings: rating)
 	}
 	

@@ -61,7 +61,7 @@ class BookReviewsVC: UIViewController {
 				}
 			} else if let result = result {
 				self.book = result
-				self.reviews = result.reviews.sorted(by: {$1.id > $0.id})
+				self.reviews = result.reviews.sorted(by: {$0.id > $1.id})
 				DispatchQueue.main.async {
 					self.tableView.reloadData()
 				}

@@ -693,35 +693,35 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
                                                                         <state key="normal" image="starOff"/>
                                                                         <connections>
-                                                                            <action selector="starBtnAction:" destination="w93-OB-mIM" eventType="touchUpInside" id="Dgi-Yo-d5z"/>
+                                                                            <action selector="starBtnToggle:" destination="w93-OB-mIM" eventType="touchUpInside" id="Dgi-Yo-d5z"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-oa-SEi" customClass="StarButton" customModule="Bookr" customModuleProvider="target">
                                                                         <rect key="frame" x="60" y="0.0" width="60" height="50"/>
                                                                         <state key="normal" image="starOff"/>
                                                                         <connections>
-                                                                            <action selector="starBtnAction:" destination="w93-OB-mIM" eventType="touchUpInside" id="Nb5-Qa-1wn"/>
+                                                                            <action selector="starBtnToggle:" destination="w93-OB-mIM" eventType="touchUpInside" id="Nb5-Qa-1wn"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGO-u4-3kC" customClass="StarButton" customModule="Bookr" customModuleProvider="target">
                                                                         <rect key="frame" x="120" y="0.0" width="60" height="50"/>
                                                                         <state key="normal" image="starOff"/>
                                                                         <connections>
-                                                                            <action selector="starBtnAction:" destination="w93-OB-mIM" eventType="touchUpInside" id="uM8-tq-Ucz"/>
+                                                                            <action selector="starBtnToggle:" destination="w93-OB-mIM" eventType="touchUpInside" id="uM8-tq-Ucz"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fe-Kb-2dN" customClass="StarButton" customModule="Bookr" customModuleProvider="target">
                                                                         <rect key="frame" x="180" y="0.0" width="60" height="50"/>
                                                                         <state key="normal" image="starOff"/>
                                                                         <connections>
-                                                                            <action selector="starBtnAction:" destination="w93-OB-mIM" eventType="touchUpInside" id="ZQ6-bE-bLu"/>
+                                                                            <action selector="starBtnToggle:" destination="w93-OB-mIM" eventType="touchUpInside" id="ZQ6-bE-bLu"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmR-Ui-cO7" customClass="StarButton" customModule="Bookr" customModuleProvider="target">
                                                                         <rect key="frame" x="240" y="0.0" width="60" height="50"/>
                                                                         <state key="normal" image="starOff"/>
                                                                         <connections>
-                                                                            <action selector="starBtnAction:" destination="w93-OB-mIM" eventType="touchUpInside" id="zL1-JB-0gE"/>
+                                                                            <action selector="starBtnToggle:" destination="w93-OB-mIM" eventType="touchUpInside" id="zL1-JB-0gE"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>

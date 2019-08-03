@@ -25,8 +25,8 @@ extension NetworkManager {
 	
 	func post(review: ReviewRequest, onBookId id: Int, completion: @escaping (_ book: Review?, _ error: String?) -> ()) {
 		router.request(.postReview(bookId: id, request: review)) { (data, response, error) in
-			let returnRequest = self.getObject(data, response, error, Review.self)
-			completion(returnRequest.0, returnRequest.1)
+			let returnRequest = self.getArray(data, response, error, Review.self)
+			completion(returnRequest.0?.first, returnRequest.1)
 		}
 	}
 }
