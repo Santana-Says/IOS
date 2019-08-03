@@ -25,8 +25,16 @@ class ReviewCell: UITableViewCell {
 		guard let review = review else { return }
 		
 		#warning("Add line seperator after each review")
-		#warning("Get profile name")
-		starRatingImgView.setStarRating(of: review.ratings)
-		reviewLbl.text = review.review
+		NetworkManager.shared.getUserBy(id: review.userId) { (result, error) in
+			if let error = error {
+				print(error)
+			} else if let result = result {
+				DispatchQueue.main.async {
+					self.nameLbl.text = "\(result.firstName.capitalized) \(result.lastName.capitalized)"
+					self.starRatingImgView.setStarRating(of: review.ratings)
+					self.reviewLbl.text = review.review
+				}
+			}
+		}
 	}
 }

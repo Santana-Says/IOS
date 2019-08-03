@@ -68,7 +68,6 @@ class BookReviewsVC: UIViewController {
 			}
 		}
 	}
-
 }
 
 extension BookReviewsVC: UITableViewDataSource {
@@ -95,6 +94,7 @@ extension BookReviewsVC: UITableViewDataSource {
 			return cell
 		} else if indexPath.section == 1 {
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell") as? ReviewCell else { return UITableViewCell() }
+			
 			cell.review = reviews[indexPath.row]
 			return cell
 		}
