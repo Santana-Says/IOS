@@ -80,7 +80,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Bg5-IN-ops" kind="show" id="ROp-35-Lc2"/>
+                                                    <segue destination="ceW-7d-JPs" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="BDv-3D-E6k"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="MzT-eL-Let">
@@ -134,13 +134,92 @@
             </objects>
             <point key="canvasLocation" x="63.768115942028992" y="879.91071428571422"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="VBo-7f-O9z">
+        <!--MenuVC-->
+        <scene sceneID="EDB-5g-Vwq">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="Bg5-IN-ops" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KHN-5m-sxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ceW-7d-JPs" customClass="MenuVC" customModule="Bookr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k1M-Kg-2cj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7x-P0-4uL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjU-4a-61V">
+                                <rect key="frame" x="227.5" y="116.5" width="186.5" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pXZ-ZP-3rf">
+                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="179"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71g-cT-V84">
+                                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="59.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="SETTINGS">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="settingsBtnTapped:" destination="ceW-7d-JPs" eventType="touchUpInside" id="4dC-jF-79N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kd-fF-OY0">
+                                                <rect key="frame" x="0.0" y="59.5" width="186.5" height="60"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="MY BOOKS">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="myBooksBtnTapped:" destination="ceW-7d-JPs" eventType="touchUpInside" id="ux6-Au-eQq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-dS-bxc">
+                                                <rect key="frame" x="0.0" y="119.5" width="186.5" height="59.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="EXPLORE">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="exploreBtnTapped:" destination="ceW-7d-JPs" eventType="touchUpInside" id="PuS-h1-bfq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pXZ-ZP-3rf" firstAttribute="leading" secondItem="kjU-4a-61V" secondAttribute="leading" id="1KU-2q-32R"/>
+                                    <constraint firstItem="pXZ-ZP-3rf" firstAttribute="top" secondItem="kjU-4a-61V" secondAttribute="top" id="EXY-Gs-Eg3"/>
+                                    <constraint firstItem="pXZ-ZP-3rf" firstAttribute="height" secondItem="kjU-4a-61V" secondAttribute="height" multiplier="0.8" id="Jlh-5T-akQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pXZ-ZP-3rf" secondAttribute="trailing" id="g5Q-NB-ZQX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="A7x-P0-4uL" firstAttribute="top" secondItem="k1M-Kg-2cj" secondAttribute="top" id="BqK-RU-X2t"/>
+                            <constraint firstItem="A7x-P0-4uL" firstAttribute="leading" secondItem="tVZ-4J-T7x" secondAttribute="leading" id="GSj-Ne-GpV"/>
+                            <constraint firstItem="kjU-4a-61V" firstAttribute="top" secondItem="A7x-P0-4uL" secondAttribute="bottom" id="Vcc-0U-Yw8"/>
+                            <constraint firstItem="tVZ-4J-T7x" firstAttribute="trailing" secondItem="A7x-P0-4uL" secondAttribute="trailing" id="gJs-ZC-hyF"/>
+                            <constraint firstItem="kjU-4a-61V" firstAttribute="width" secondItem="k1M-Kg-2cj" secondAttribute="width" multiplier="0.45" id="jVJ-qO-v6C"/>
+                            <constraint firstItem="kjU-4a-61V" firstAttribute="trailing" secondItem="tVZ-4J-T7x" secondAttribute="trailing" id="kBF-bZ-WyE"/>
+                            <constraint firstItem="kjU-4a-61V" firstAttribute="height" secondItem="k1M-Kg-2cj" secondAttribute="height" multiplier="0.25" id="uEI-Uk-HOD"/>
+                            <constraint firstItem="A7x-P0-4uL" firstAttribute="height" secondItem="k1M-Kg-2cj" secondAttribute="height" multiplier="0.13" id="uoW-xq-MPm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tVZ-4J-T7x"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UhW-7v-BLw" appends="YES" id="4M6-x3-wtV"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2i-LU-eOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UhW-7v-BLw">
+                    <connections>
+                        <action selector="closeOnTap:" destination="ceW-7d-JPs" id="hLO-KM-6ri"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="592" y="419"/>
+            <point key="canvasLocation" x="3070" y="69"/>
         </scene>
         <!--Book ResultsVC-->
         <scene sceneID="Fnd-P8-Jch">
@@ -169,7 +248,7 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="profileBtn:" destination="HGf-9x-FH9" eventType="touchUpInside" id="jWh-Oy-Vrj"/>
-                                                            <segue destination="cOc-R1-hhU" kind="unwind" unwindAction="unwindToHeroPage:" id="mVH-oK-Mc2"/>
+                                                            <segue destination="ceW-7d-JPs" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="NpU-EO-8ZA"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SFt-Jg-DkB">
@@ -332,7 +411,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9XG-7V-0FO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="cOc-R1-hhU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1057.9710144927537" y="879.91071428571422"/>
         </scene>
@@ -362,7 +440,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="af4-Pv-XkX" kind="unwind" unwindAction="unwindToHeroPage:" id="cLW-4i-ZDg"/>
+                                                            <segue destination="ceW-7d-JPs" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="IyC-oz-KQa"/>
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mYf-W2-2Ha">
@@ -420,7 +498,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="nZc-yV-Fpy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1097.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="1129.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Algebra Introductory and Intermediate" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FD-Jh-6Eo" userLabel="Title">
                                                                     <rect key="frame" x="29" y="0.0" width="356" height="72"/>
@@ -438,7 +516,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjP-a7-RhA" customClass="CustomButton" customModule="Bookr" customModuleProvider="target">
-                                                                    <rect key="frame" x="123" y="1016.5" width="168" height="34"/>
+                                                                    <rect key="frame" x="62" y="1016.5" width="290" height="50"/>
                                                                     <color key="backgroundColor" red="0.18229476789999999" green="0.47173935169999998" blue="0.1269543853" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                     <state key="normal" title="ADD TO MY BOOKS">
@@ -446,7 +524,7 @@
                                                                     </state>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuZ-Bz-nuK" customClass="CustomButton" customModule="Bookr" customModuleProvider="target">
-                                                                    <rect key="frame" x="142" y="1063.5" width="130" height="34"/>
+                                                                    <rect key="frame" x="62" y="1079.5" width="290" height="50"/>
                                                                     <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                     <state key="normal" title="ADD A REVIEW">
@@ -558,7 +636,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50y-qQ-jSt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="af4-Pv-XkX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2040.5797101449277" y="879.91071428571422"/>
         </scene>
@@ -587,6 +664,9 @@
                                                         <state key="normal" image="profile">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="ceW-7d-JPs" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" id="G5W-9N-Quw"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Bz3-MD-2fY">
                                                         <rect key="frame" x="8" y="8" width="56.5" height="56.5"/>
@@ -839,4 +919,7 @@
         <image name="mathFilter" width="68" height="68"/>
         <image name="profile" width="45" height="44"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="G5W-9N-Quw"/>
+    </inferredMetricsTieBreakers>
 </document>

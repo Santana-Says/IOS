@@ -27,6 +27,7 @@
 		B53C48EB22F38A44002FCFBC /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48EA22F38A44002FCFBC /* ReviewCell.swift */; };
 		B53C48ED22F3A133002FCFBC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48EC22F3A133002FCFBC /* CustomButton.swift */; };
 		B53C48EF22F3B593002FCFBC /* PostReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48EE22F3B593002FCFBC /* PostReviewVC.swift */; };
+		B5485B7E22F6DF32000966F7 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5485B7D22F6DF32000966F7 /* MenuVC.swift */; };
 		B5FE506622EF69D400EB6C6D /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506522EF69D400EB6C6D /* NetworkRouter.swift */; };
 		B5FE506822EF7EB100EB6C6D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506722EF7EB100EB6C6D /* Router.swift */; };
 		B5FE506A22EF883700EB6C6D /* BookrRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506922EF883700EB6C6D /* BookrRouter.swift */; };
@@ -76,6 +77,7 @@
 		B53C48EA22F38A44002FCFBC /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		B53C48EC22F3A133002FCFBC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B53C48EE22F3B593002FCFBC /* PostReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReviewVC.swift; sourceTree = "<group>"; };
+		B5485B7D22F6DF32000966F7 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		B5FE506522EF69D400EB6C6D /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		B5FE506722EF7EB100EB6C6D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B5FE506922EF883700EB6C6D /* BookrRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookrRouter.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				B5FE509F22F166FB00EB6C6D /* HeroPageViewController.swift */,
 				B5FE509022F1665300EB6C6D /* BookResultsVC.swift */,
+				B5485B7D22F6DF32000966F7 /* MenuVC.swift */,
 				B53C48E622F35A82002FCFBC /* BookReviewsVC.swift */,
 				B53C48EE22F3B593002FCFBC /* PostReviewVC.swift */,
 				B5FE508F22F1665300EB6C6D /* SignUpVC.swift */,
@@ -428,6 +431,7 @@
 				B53C48E522F33BB1002FCFBC /* BookCell.swift in Sources */,
 				B5FE507822F0783C00EB6C6D /* UserAPIManager.swift in Sources */,
 				B5FE509422F1665300EB6C6D /* LoginVC.swift in Sources */,
+				B5485B7E22F6DF32000966F7 /* MenuVC.swift in Sources */,
 				B5FE506622EF69D400EB6C6D /* NetworkRouter.swift in Sources */,
 				B5FE50A522F217BF00EB6C6D /* Extensions.swift in Sources */,
 				B5FE509822F1665300EB6C6D /* HomeVC.swift in Sources */,
