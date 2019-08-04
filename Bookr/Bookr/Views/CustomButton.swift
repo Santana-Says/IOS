@@ -26,6 +26,7 @@ class CustomButton: UIButton {
 		widthAnchor.constraint(equalTo: superWidth, multiplier: 0.7, constant: 0).isActive = true
 		layer.cornerRadius = layer.frame.height / 2
 		
+		titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
 		tintColor = .white
 	}
 	

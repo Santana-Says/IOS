@@ -27,7 +27,6 @@
 		B53C48EB22F38A44002FCFBC /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48EA22F38A44002FCFBC /* ReviewCell.swift */; };
 		B53C48ED22F3A133002FCFBC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48EC22F3A133002FCFBC /* CustomButton.swift */; };
 		B53C48EF22F3B593002FCFBC /* PostReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48EE22F3B593002FCFBC /* PostReviewVC.swift */; };
-		B53C48F122F3CF02002FCFBC /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C48F022F3CF02002FCFBC /* StarButton.swift */; };
 		B5FE506622EF69D400EB6C6D /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506522EF69D400EB6C6D /* NetworkRouter.swift */; };
 		B5FE506822EF7EB100EB6C6D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506722EF7EB100EB6C6D /* Router.swift */; };
 		B5FE506A22EF883700EB6C6D /* BookrRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FE506922EF883700EB6C6D /* BookrRouter.swift */; };
@@ -77,7 +76,6 @@
 		B53C48EA22F38A44002FCFBC /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
 		B53C48EC22F3A133002FCFBC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B53C48EE22F3B593002FCFBC /* PostReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReviewVC.swift; sourceTree = "<group>"; };
-		B53C48F022F3CF02002FCFBC /* StarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 		B5FE506522EF69D400EB6C6D /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		B5FE506722EF7EB100EB6C6D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B5FE506922EF883700EB6C6D /* BookrRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookrRouter.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 			children = (
 				B5FE509922F166B100EB6C6D /* FilterCollectionViewCell.swift */,
 				B53C48EA22F38A44002FCFBC /* ReviewCell.swift */,
-				B53C48F022F3CF02002FCFBC /* StarButton.swift */,
 				B53C48E422F33BB1002FCFBC /* BookCell.swift */,
 				B53C48E822F38A31002FCFBC /* BookDetailsCell.swift */,
 				B53C48EC22F3A133002FCFBC /* CustomButton.swift */,
@@ -423,7 +420,6 @@
 				B53C48EB22F38A44002FCFBC /* ReviewCell.swift in Sources */,
 				B5FE508422F0E56800EB6C6D /* ReviewRequest.swift in Sources */,
 				B53C48E722F35A82002FCFBC /* BookReviewsVC.swift in Sources */,
-				B53C48F122F3CF02002FCFBC /* StarButton.swift in Sources */,
 				B5FE50A122F166FB00EB6C6D /* HeroPageViewController.swift in Sources */,
 				B5FE507A22F0A6F100EB6C6D /* Review.swift in Sources */,
 				B506A54022EF619D00061FCF /* HTTPMethod.swift in Sources */,

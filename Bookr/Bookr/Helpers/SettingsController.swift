@@ -21,7 +21,7 @@ class SettingsController {
 	private let userPasswordKey = "user_password_key"
 	private let saveProfileKey = "save_profile_key"
 	
-	var userToken: String? {
+	private(set) var userToken: String? {
 		get {
 			return keychain[tokenKey]
 		}
@@ -33,6 +33,8 @@ class SettingsController {
 			keychain[tokenKey] = newToken
 		}
 	}
+	
+	private(set) var loggedInUser: User?
 	
 	private(set) var userCredentials: LoginRequest? {
 		get {
@@ -78,5 +80,10 @@ class SettingsController {
 		if isSaveCredentials {
 			userCredentials = credentials
 		}
+	}
+	
+	func loginProcedure(_ login: Login) {
+		loggedInUser = login.user
+		userToken = login.token
 	}
 }

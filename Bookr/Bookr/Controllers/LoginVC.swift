@@ -51,7 +51,7 @@ class LoginVC: UIViewController {
 				print(results)
 				SettingsController.shared.isSaveCredentials = true
 				SettingsController.shared.persist(credentials: login)
-				SettingsController.shared.userToken = results.token
+				SettingsController.shared.loginProcedure(results)
 				DispatchQueue.main.async {
 					self.performSegue(withIdentifier: "ShowMainSegue", sender: nil)
 				}

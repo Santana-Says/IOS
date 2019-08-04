@@ -20,8 +20,8 @@ class HeroPageViewController: UIViewController {
 	
 	//MARK: - Life Cycle
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		
 		loginBtn.isHidden = true
 		startBtn.isHidden = true
@@ -51,8 +51,7 @@ class HeroPageViewController: UIViewController {
 					}
 					self.showLogins()
 				} else if let result = result {
-					SettingsController.shared.userToken = result.token
-					print("token updated")
+					SettingsController.shared.loginProcedure(result)
 					DispatchQueue.main.asyncAfter(deadline: .now()+1) {
 						self.performSegue(withIdentifier: "ShowMainSegue", sender: nil)
 					}

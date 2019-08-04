@@ -16,14 +16,14 @@ class PostReviewVC: UIViewController {
 	@IBOutlet weak var titleLbl: UILabel!
 	@IBOutlet weak var authorLbl: UILabel!
 	@IBOutlet weak var publisherLbl: UILabel!
-	@IBOutlet weak var ratingImgView: UIImageView!
 	@IBOutlet weak var reviewTextView: UITextView!
-	@IBOutlet var starBtnCollection: [StarButton]!
+	@IBOutlet weak var ratingImgView: UIImageView!
 	
 	//MARK: - Properties
 	
 	var book: BookWReviews?
 	var bookUrl: String?
+	private var rating = 1
 	
 	//MARK: - Life Cycle
 	
@@ -31,8 +31,6 @@ class PostReviewVC: UIViewController {
 		super.viewDidLoad()
 		
 		configView()
-		configStarButtons()
-		reviewTextView.text = ""
 	}
 	
 	//MARK: - IBActions
@@ -45,16 +43,9 @@ class PostReviewVC: UIViewController {
 		postReview()
 	}
 	
-	@IBAction func starBtnToggle(_ sender: StarButton) {
-		sender.IsStarOn.toggle()
-		for star in starBtnCollection {
-			if sender.IsStarOn && star.tag < sender.tag {
-				star.IsStarOn = sender.IsStarOn
-			}
-			if !sender.IsStarOn && star.tag > sender.tag {
-				star.IsStarOn = sender.IsStarOn
-			}
-		}
+	@IBAction func setStarRatingBtnAction(_ sender: UIButton) {
+		rating = sender.tag
+		ratingImgView.image = UIImage(named: "\(sender.tag)StarRating")
 	}
 	
 	//MARK: - Helpers
@@ -70,27 +61,17 @@ class PostReviewVC: UIViewController {
 		
 		reviewTextView.layer.borderWidth = 1
 		reviewTextView.layer.borderColor = UIColor.lightGray.cgColor
-	}
-	
-	private func configStarButtons() {
-		starBtnCollection.sort(by: {$0.tag < $1.tag})
-	}
-	
-	private func createReveiew() -> ReviewRequest {
-		var rating = 0
-		for starBtn in starBtnCollection.reversed() {
-			if starBtn.imageView?.image == UIImage(named: "starOn") {
-				rating = starBtn.tag
-				break
-			}
-		}
+		reviewTextView.text = ""
 		
-		return ReviewRequest(review: reviewTextView.text, userId: 11, ratings: rating)
+		ratingImgView.image = UIImage(named: "1StarRating")
+		
 	}
 	
 	private func postReview() {
-		guard let book = book else { return }
-		NetworkManager.shared.post(review: createReveiew(), onBookId: book.id) { (result, error) in
+		guard let book = book, let userId = SettingsController.shared.loggedInUser?.id else { return }
+		let review = ReviewRequest(review: reviewTextView.text, userId: userId, ratings: rating)
+		
+		NetworkManager.shared.post(review: review, onBookId: book.id) { (result, error) in
 			if let error = error {
 				DispatchQueue.main.async {
 					self.presentInfoAlert(title: "Error", message: error)

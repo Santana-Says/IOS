@@ -60,11 +60,10 @@ class SignUpVC: UIViewController {
 		NetworkManager.shared.register(newUser: newUser) { (result, error) in
 			if let error = error {
 				self.presentInfoAlert(title: "Error", message: error)
-			} else {
+			} else if let result = result {
 				let login = LoginRequest(email: newUser.email, password: newUser.password)
-				SettingsController.shared.isSaveCredentials = true
 				SettingsController.shared.persist(credentials: login)
-				SettingsController.shared.userToken = result?.token
+				SettingsController.shared.loginProcedure(result)
 				DispatchQueue.main.async {
 					self.performSegue(withIdentifier: "ShowMainSegue", sender: nil)
 				}
